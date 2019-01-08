@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport"
@@ -23,24 +23,20 @@
 				</h2>
 
 				<div class="download">
-					<a class="download__button" href="#">
-						<div class="download__wrapper">
+					<a class="download__button download__apple" href="#">
 							<img class="download__icon" src="./images/apple-icon.svg" alt="apple">
 							<p class="download__text-wrapper">
 								<span class="download__text">download on the</span>
 								<b class="download__text">app store</b>
 							</p>
-						</div>
 					</a>
 
-					<a class="download__button" href="#">
-						<div class="download__wrapper">
+					<a class="download__button download__google" href="#">
 							<img class="download__icon" src="./images/google-play-icon.svg" alt="google">
 							<p class="download__text-wrapper">
 								<span class="download__text">get it on</span>
 								<b class="download__text">google play</b>
 							</p>
-						</div>
 					</a>
 				</div>
 
@@ -54,46 +50,50 @@
 				</h2>
 			</div>
 
-			<img class="know__image" src="./images/footballer_192.png" alt="the image of the athlete">
+			<picture>
+				<source srcset="./images/footballer_192.png" media="(max-width: 767px)">
+				<source srcset="./images/footballer_497.png" media="(max-width: 960px)">
+				<img class="know__image athlets__image"  src="./images/footballer_566.png" alt="footballer">
+			</picture>
 
 			<ul class="know__list athlets__list">
-				<li class="know__item">
+				<li class="know__item athlets__сonnection">
 					<div class="container">
-						<h3 class="know__title">
+						<h3 class="know__title  athlets__item-title">
 							<span class="know__item-number know__item-number--purple">
 								01
 							</span>
 							Connection
 						</h3>
-						<div class="know__item-text">
+						<div class="know__item-text athlets__item-text">
 							Connect with coaches directly, you can ping coaches to view profile.
 						</div>
 					</div>
 				</li>
-				<li class="know__item know__item--grey">
+				<li class="know__item know__item--grey athlets__collaboration">
 					<div class="container">
-						<h3 class="know__title">
+						<h3 class="know__title athlets__item-title">
 							<span class="know__item-number know__item-number--purple">
 								02
 							</span>
 							Collaboration
 						</h3>
-						<div class="know__item-text">
-							Work with other student athletes to  increase visability.
+						<div class="know__item-text athlets__item-text">
+							Work with other student athletes to increase visability.
 							When you share and like other players videos it will increase your visability as a player.
 							This is the team work aspect to Surface 1.
 						</div>
 					</div>
 				</li>
-				<li class="know__item know__item--purple">
+				<li class="know__item know__item--purple athlets__growth">
 					<div class="container">
-						<h3 class="know__title">
+						<h3 class="know__title athlets__item-title">
 							<span class="know__item-number know__item-number">
 								03
 							</span>
 							Growth
 						</h3>
-						<div class="know__item-text know__item-text-white-text">
+						<div class="know__item-text know__item-text-white-text athlets__item-text">
 							Resources and tools for you to get better as a student Athelte.
 							Access to training classes, tutor sessions, etc
 						</div>
@@ -104,50 +104,54 @@
 
 		<section class="players">
 			<div class="container">
-				<div class="know__title--big">
+				<div class="players__title know__title--big">
 					PLAYERS
 				</div>
 			</div>
 
-			<img class="know__image" src="./images/basketballer_302.png" alt="the image of the athlete">
+			<picture>
+				<source srcset="./images/basketballer_302.png" media="(max-width: 767px)">
+				<source srcset="./images/basketballer_436.png" media="(max-width: 960px)">
+				<img class="know__image players__image"  src="./images/basketballer_991.png" alt="basketballer">
+			</picture>
 
-			<ul class="know__list">
-				<li class="know__item">
+			<ul class="know__list players__list">
+				<li class="know__item players__сonnection">
 					<div class="container">
-						<h3 class="know__title">
+						<h3 class="know__title players__item-title">
 							<span class="know__item-number know__item-number--purple">
 								01
 							</span>
 							Connection
 						</h3>
-						<div class="know__item-text">
+						<div class="know__item-text players__item-text">
 							Connect with talented athlete directly,
 							you can watch their skills through video showreels directly from Surface 1.
 						</div>
 					</div>
 				</li>
-				<li class="know__item know__item--grey">
+				<li class="know__item know__item--grey players__collaboration">
 					<div class="container">
-						<h3 class="know__title">
+						<h3 class="know__title players__item-title">
 							<span class="know__item-number know__item-number--purple">
 								02
 							</span>
 							Collaboration
 						</h3>
-						<div class="know__item-text">
+						<div class="know__item-text players__item-text">
 							Work with recruiter to increase your chances of findingtalented athlete.
 						</div>
 					</div>
 				</li>
-				<li class="know__item know__item--dark-purple">
+				<li class="know__item know__item--dark-purple players__growth">
 					<div class="container">
-						<h3 class="know__title">
+						<h3 class="know__title players__item-title">
 							<span class="know__item-number know__item-number--purple-text">
 								03
 							</span>
 							Growth
 						</h3>
-						<div class="know__item-text know__item-text-white-text">
+						<div class="know__item-text know__item-text-white-text players__item-text">
 							Save your time, recruit proper athlets for your team.
 						</div>
 					</div>
@@ -178,7 +182,9 @@
 				<div class="stages__info">
 					<h2 class="stages__info-label">be active</h2>
 					<p class="stages__info-text">
-							Post videos with your skills, Like and follow others to be  mor
+						Post videos with your skills,
+						 Like and follow others to be
+						more popular.
 					</p>
 				</div>
 			</div>
@@ -187,7 +193,7 @@
 				<div class="stages__info">
 					<h2 class="stages__info-label">find contact</h2>
 					<p class="stages__info-text">
-						Contact others to find right coach or athlete you are looking f
+						Contact others to find right coach or athlete you are looking for.
 					</p>
 				</div>
 
@@ -229,7 +235,11 @@
 
 				<div class="stages__info">
 					<h2 class="stages__info-label">workit</h2>
-					<p class="stages__info-text">Enjoy being a student athlete, the recruiting process can be ov</p>
+					<p class="stages__info-text">
+						Enjoy being a student athlete,
+						the recruiting process can be overwhelming,
+						we want to make this enjoyable experience.
+					</p>
 				</div>
 			</div>
 
@@ -248,24 +258,20 @@
 				</div>
 
 				<div class="footer__download download">
-					<a class="download__button" href="#">
-						<div class="download__wrapper">
-							<img class="download__icon" src="./images/apple-icon.svg" alt="apple">
-							<p class="download__text-wrapper">
-								<span class="download__text">download on the</span>
-								<b class="download__text">app store</b>
-							</p>
-						</div>
+					<a class="download__button download__apple" href="#">
+						<img class="download__icon" src="./images/apple-icon.svg" alt="apple">
+						<p class="download__text-wrapper">
+							<span class="download__text">download on the</span>
+							<b class="download__text">app store</b>
+						</p>
 					</a>
 
-					<a class="download__button" href="#">
-						<div class="download__wrapper">
-							<img class="download__icon" src="./images/google-play-icon.svg" alt="google">
-							<p class="download__text-wrapper">
-								<span class="download__text">get it on</span>
-								<b class="download__text">google play</b>
-							</p>
-						</div>
+					<a class="download__button download__google" href="#">
+						<img class="download__icon" src="./images/google-play-icon.svg" alt="google">
+						<p class="download__text-wrapper">
+							<span class="download__text">get it on</span>
+							<b class="download__text">google play</b>
+						</p>
 					</a>
 				</div>
 

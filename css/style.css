@@ -48,9 +48,13 @@ body{
 }
 
 /* common block download */
+.download{
+    font-size: 0;
+}
 .download__button{
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     margin-bottom: 13px;
     padding: 5px 0;
     background-color: #5D41B0;
@@ -60,19 +64,25 @@ body{
     text-align: center;
     line-height: 1.5;
 }
-.download__wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
-    width: 118px;
-    margin: 0 auto;
+.download__apple{
+    padding-left: 81px;
+    padding-right: 81px;
+    align-items: flex-start;
+}
+.download__apple .download__icon{
+    width: 21px;
+}
+.download__google{
+    padding-left: 82px;
+    padding-right: 81px;
+}
+.download__google .download__icon{
+    width: 22px;
 }
 .download__button:last-child{
     margin-bottom: 0;
 }
 .download__icon{
-    height: 21px;
     fill: #ffffff;
     margin-right: 9px;
 }
@@ -84,16 +94,57 @@ body{
 .download__text{
     display: block;
 }
+@media (min-width: 767px) {
+    .download{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 43px;
+    }
+    .download__button{
+        width: calc(50% - 13px);
+        margin-bottom: 0;
+        padding: 16px 0;
+        border-radius: 40px;
+    }
+    .download__apple{
+        margin-right: 13px;
+        padding-left: 37px;
+        padding-right: 66px;
+        align-items: center;
+    }
+    .download__apple .download__icon{
+        width: 45px;
+    }
+    .download__google{
+        margin-left: 13px;
+        padding-left: 58px;
+        padding-right: 79px;
+    }
+    .download__google .download__icon{
+        width: 45px;
+    }
+    .download__icon{
+        margin-right: 23px;
+    }
+    .download__text{
+        font-size: 1.6em;
+        line-height: 1.2;
+        letter-spacing: 0.1px;
+    }
+}
 
 /* common block logo */
 .logo{
-    margin-bottom: 120px;
     text-align: center;
-    fill: #ffffff;
 }
 .logo__icon{
     width: 133px;
     color: #ffffff;
+}
+@media (min-width: 767px) {
+    .logo__icon{
+        width: 205px;
+    }
 }
 
 /* block header */
@@ -123,6 +174,9 @@ body{
     background-size: cover;
     z-index: -2;
 }
+.header__logo{
+    margin-bottom: 120px;
+}
 .header__info{
     margin-bottom: 82px;
     font-size: 10px;
@@ -140,6 +194,29 @@ body{
     margin-bottom: 0;
     line-height: 1.16;
 }
+@media (min-width: 767px) {
+    .header{
+        padding-top: 38px;
+        padding-bottom: 91px;
+    }
+    .header__logo{
+        margin-bottom: 160px;
+    }
+    .header__info{
+        padding: 0 69px;
+        line-height: 1.2;
+        margin-bottom: 301px;
+    }
+    .header__info-text{
+        font-size: 6.6em;
+        letter-spacing: 2px;
+        margin-bottom: 0;
+    }
+    .header__info-text:nth-child(2){
+        padding-left: 108px;
+        letter-spacing: 1.54px;
+    }
+}
 
 /* block know */
 .know__title--big{
@@ -150,11 +227,9 @@ body{
 }
 .know__image{
     position: relative;
-    left: 50%;
     transform: translateX(-50%);
 }
 .know__item{
-    padding: 50px 0;
     background-color: #F9F9F9;
 }
 .know__item--grey{
@@ -166,14 +241,11 @@ body{
 .know__item--dark-purple{
     background-color: #090B35;
 }
-.know__item:nth-child(1){
-    padding-top: 82px;
-}
 .know__title{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     color: #C1C1C1;
     font-size: 22px;
     text-transform: uppercase;
@@ -203,10 +275,37 @@ body{
 }
 .know__item-text{
     font-weight: lighter;
+    letter-spacing: 0.26px;
+    line-height: 1.2;
 }
 .know__item-text-white-text{
     color: #ffffff;
 }
+@media (min-width: 767px) {
+    .know__title--big{
+        font-size: 4.8rem;
+    }
+    .know__title{
+        font-size: 32px;
+        align-items: flex-start;
+    }
+    .know__item-number{
+        margin-top: 1px;
+        margin-right: 8px;
+    }
+    .know__item-number:after{
+        width: 82%;
+        height: 5px;
+    }
+    .know__item-text{
+        letter-spacing: 0.8px;
+        line-height: 1.7;
+    }
+    .know__image{
+        position: absolute;
+    }
+}
+
 
 /* block athlets */
 .athlets{
@@ -215,18 +314,114 @@ body{
 .athlets__title{
     margin-bottom: 5px;
 }
+.athlets__image{
+    left: 52%;
+}
 .athlets__list{
-    margin-top: -55px;
+    margin-top: -65px;
+}
+.athlets__сonnection{
+    padding-top: 82px;
+    padding-bottom: 47px;
+}
+.athlets__collaboration{
+    padding-top: 57px;
+    padding-bottom: 48px;
+}
+.athlets__growth{
+    padding-top: 51.4px;
+    padding-bottom: 51px;
+}
+@media (min-width: 767px) {
+    .athlets{
+        position: relative;
+        padding-top: 61px;
+    }
+    .athlets__title{
+        text-align: right;
+        padding-right: 120px;
+    }
+    .athlets__image{
+        top: 93px;
+        left: 86px;
+    }
+    .athlets__list{
+        margin-top: 0;
+    }
+    .athlets__item-title,
+    .athlets__item-text{
+        margin-left: 37.5%;
+    }
+    .athlets__сonnection{
+        padding-top: 24px;
+        padding-bottom: 34px;
+    }
+    .athlets__collaboration{
+        padding-top: 31px;
+        padding-bottom: 34px;
+    }
+    .athlets__growth{
+        padding-top: 33px;
+        padding-bottom: 32px;
+    }
 }
 
-/* block athlets */
-
+/* block players */
+.players__list{
+    margin-top: -24px;
+}
+.players__сonnection{
+    padding-top: 77px;
+    padding-bottom: 50px;
+}
+.players__collaboration{
+    padding-top: 52px;
+    padding-bottom: 54px;
+}
+.players__growth{
+    padding-top: 50px;
+    padding-bottom: 53px;
+}
+@media (min-width: 767px) {
+    .players{
+        position: relative;
+        padding-top: 50px;
+    }
+    .players__title{
+        padding-left: 14px;
+    }
+    .players__image{
+        top: 29px;
+        right: 0;
+        transform: translateX(0);
+    }
+    .players__list{
+        margin-top: 0;
+    }
+    .players__item-title,
+    .players__item-text{
+        width: 56%;
+        padding-left: 17px;
+    }
+    .players__сonnection{
+        padding-top: 31px;
+        padding-bottom: 33px;
+    }
+    .players__collaboration{
+        padding-top: 34px;
+        padding-bottom: 32px;
+    }
+    .players__growth{
+        padding-top: 34px;
+        padding-bottom: 32px;
+    }
+}
 
 /* block numbering */
 .numbering{
     position: relative;
-    height: 10px;
-    padding: 0 15px;
+    height: 12px;
+    padding: 0 20px;
     margin-bottom: 15px;
 }
 .numbering__tile{
@@ -234,11 +429,11 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background-color: #5D41B0;
     color: #ffffff;
-    transform: translateY(-50px);
+    transform: translateY(-58px);
 }
 .numbering__number:after{
     content: '';
@@ -249,6 +444,26 @@ body{
     background-color: #ddd;
     opacity: 0.6;
 }
+@media (min-width: 767px) {
+    .numbering{
+        height: 36px;
+        padding: 0 33px;
+        margin-bottom: 44px;
+    }
+    .numbering__tile{
+        width: 116px;
+        height: 116px;
+        transform: translateY(-80px);
+    }
+    .numbering__number{
+        font-size: 1.4em;
+        font-weight: bold;
+        line-height: 1;
+    }
+    .numbering__number:after{
+        margin-top: 5px
+    }
+}
 
 /* block stages */
 .stages__block{
@@ -256,15 +471,17 @@ body{
     flex-direction: column;
 }
 .stages__info{
-    padding: 0 15px;
+    padding: 0 20px;
 }
 .stages__info-label{
     margin-bottom: 15px;
     text-transform: uppercase;
     color: #E7E7E7;
+    letter-spacing: 3.25px;
 }
 .stages__info-text{
-    margin-bottom: 70px;
+    letter-spacing: 0.8px;
+    line-height: 1.25;
 }
 .stages__find-contact{
     flex-direction: column-reverse;
@@ -275,11 +492,61 @@ body{
 .stages__image{
     width: 100%;
 }
+.stages__be-active .stages__info{
+    margin-bottom: 77px;
+}
+.stages__find-contact .stages__info{
+    margin-bottom: 80px;
+}
+.stages__workit .stages__info{
+    margin-bottom: 72px;
+}
+@media (min-width: 767px) {
+    .stages__info{
+        padding: 0 28px;
+    }
+    .stages__info-label{
+        letter-spacing: 2px;
+        line-height: 1;
+        font-size: 76px;
+        margin-bottom: 25px;
+    }
+    .stages__info-text{
+        padding: 0 4px;
+        font-size: 25px;
+        letter-spacing: 0.7px;
+        line-height: 1.13;
+    }
+    .stages__be-active .stages__info{
+        margin-bottom: 100px;
+    }
+    .stages__find-contact .numbering{
+        margin-bottom: 35px;
+    }
+    .stages__find-contact .numbering__tile{
+        transform: translateY(-90px);
+    }
+    .stages__find-contact .stages__info{
+        margin-bottom: 106px;
+    }
+    .stages__workit .numbering{
+        margin-bottom: 32px;
+    }
+    .stages__workit .numbering__tile{
+        transform: translateY(-89px);
+    }
+    .stages__workit .stages__info-label{
+        font-size: 81px;
+    }
+    .stages__workit .stages__info{
+        margin-bottom: 111px;
+    }
+}
 
 /* block footer */
 .footer{
     position: relative;
-    padding-top: 90px;
+    padding-top: 98px;
     padding-bottom: 10px;
 }
 .footer:before{
@@ -307,30 +574,64 @@ body{
     text-align: center;
 }
 .footer__icon{
-    padding: 7px;
-    border-radius: 12px;
+    padding: 12px 5px;
+    border-radius: 16px;
     background-color: #5D41B0;
-    margin-bottom: 20px;
+    margin-bottom: 44px;
+    width: 73px;
+    height: 73px;
 }
 .footer__info{
     font-size: 10px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
+    letter-spacing: 0.4px;
 }
 .footer__info-title{
     color: #ffffff;
     font-size: 3.3em;
     text-transform: uppercase;
+    line-height: 1.36;
 }
 .footer__info-text{
     color: #9B8EC1;
-    font-size: 1.5em;
+    font-size: 1.46em;
     text-transform: uppercase;
 }
 .footer__download{
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 .footer__logo{
     margin-bottom: 0;
+}
+
+@media (min-width: 767px) {
+    .footer{
+        padding-top: 127px;
+        padding-bottom: 17px;
+    }
+    .footer__icon{
+        width: 130px;
+        height: 135px;
+        padding: 0 15px;
+        margin-bottom: 64px;
+        border-radius: 25px;
+    }
+    .footer__info{
+        margin-bottom: 285px;
+    }
+    .footer__info-title{
+        margin-bottom: 11px;
+        font-size: 8.4em;
+        line-height: 1;
+        letter-spacing: 1.5px;
+    }
+    .footer__info-text{
+        font-size: 3.55em;
+        line-height: 1;
+    }
+    .footer__download{
+        margin-bottom: 58px;
+    }
 }
 
